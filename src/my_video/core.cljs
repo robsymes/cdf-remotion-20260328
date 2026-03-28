@@ -8,6 +8,7 @@
 (defn root []
   [:> Composition
    {:id "MyVideo"
+    
     :component (r/reactify-component my-scene)
     :durationInFrames 120
     :fps 30
