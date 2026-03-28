@@ -1,9 +1,10 @@
 (ns my-video.core
-  (:require ["remotion" :refer [registerRoot Composition]]
+  (:require ["remotion" :refer [registerRoot Composition AbsoluteFill]]
             [reagent.core :as r]))
 
 (defn my-scene []
-  [:div "Hello from CLJS!"])
+  [:> AbsoluteFill
+   [:div "Hello from CLJS!"]])
 
 (defn root []
   [:> Composition
