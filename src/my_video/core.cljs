@@ -2,7 +2,7 @@
   (:require ["remotion" :refer [registerRoot Composition AbsoluteFill]]
             [reagent.core :as r]))
 
-(defn my-scene []
+#_(defn my-scene []
   [:> AbsoluteFill
    {:style {:background-color "white" ; Ensure it's not transparent
             :display "flex"
@@ -17,6 +17,15 @@
       }}
     "Hello Rob!!"]])
 
+(defn my-scene []
+  [:> AbsoluteFill
+   {:style {:background-color "red" ; Bright red background
+            :display "flex"
+            :justify-content "center"
+            :align-items "center"}}
+   [:h1 {:style {:color "white" :font-size "200px"}} "TEST"]])
+
+
 (defn root []
   [:> Composition
    {:id "MyComp"
@@ -29,4 +38,7 @@
 (defn ^:export init []
   (js/console.log "HERE")
   (registerRoot (r/reactify-component root)))
+
+
+
 
