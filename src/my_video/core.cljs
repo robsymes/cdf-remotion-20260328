@@ -4,7 +4,17 @@
 
 (defn my-scene []
   [:> AbsoluteFill
-   [:div "Hello from CLJS!"]])
+   {:style {:background-color "white" ; Ensure it's not transparent
+            :display "flex"
+            :justify-content "center"
+            :align-items "center"
+            :font-size "100px"
+            :color "black"}}
+   [:div
+    {:style
+     {:color "white"
+      }}
+    "Hello Rob!!"]])
 
 (defn root []
   [:> Composition
