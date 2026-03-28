@@ -9,10 +9,11 @@
             :justify-content "center"
             :align-items "center"
             :font-size "100px"
-            :color "black"}}
+            :color "#ffaa33"}}
    [:div
     {:style
-     {:color "white"
+     {:color "#ffffff"
+      :background-color "#ffff00"
       }}
     "Hello Rob!!"]])
 
@@ -26,5 +27,6 @@
     :height 1080}])
 
 (defn ^:export init []
+  (js/console.log "HERE")
   (registerRoot (r/reactify-component root)))
 
