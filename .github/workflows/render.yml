@@ -22,8 +22,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Compile ClojureScript
-        run: npx shadow-cljs release remotion
+      # - name: Compile ClojureScript
+      #   run: npx shadow-cljs release remotion
 
       - name: Render Video
         run: npx remotion render src/index.ts MyComp out.mp4 --log=verbose
